@@ -150,7 +150,7 @@
           </div>
         </div>
         <div class="forgot-password-form-block w-form">
-          <form id="email-form" name="email-form" data-name="Email Form" action="https://syncy-backend.onrender.com/target_user_profile" method="post" class="">
+          <form id="email-form" enctype="multipart/form-data" name="email-form" data-name="Email Form" action="https://syncy-backend.onrender.com/target_user_profile" method="post" class="">
             <label for="name" class="reference-field-label">Full Name <span class="red-star-text-span">*</span></label>
             <input type="text" class="reference-text-field w-input" maxlength="256" name="name" data-name="name" id="name" required="true">
             <label for="email-4" class="reference-field-label">Your email <span class="red-star-text-span">*</span></label>
@@ -160,7 +160,7 @@
             <label for="calendly" class="reference-field-label">Calendly or similar link for 30-minute call <span class="red-star-text-span">*</span></label>
             <input type="text" class="reference-text-field w-input" maxlength="256" name="calendly" data-name="calendly" placeholder="" id="calendly" required="true">
             <label for="bio" class="reference-field-label">Bio (max 400 characters ) <span class="red-star-text-span">*</span></label>
-            <textarea type="text" height="20vh" class="reference-text-field w-input" maxlength="256" name="bio-max-250-characters" data-name="bio" placeholder="" id="bio" required="true"></textarea>
+            <textarea id="bio-max-250-characters" name="bio-max-250-characters" rows="4" cols="50" class="reference-text-field w-input" data-name="bio" maxlength="400" required="true"></textarea>
             <label for="profile-image" class="reference-field-label">Profile Image <span class="red-star-text-span">*</span></label>
             <input type="file" class="reference-text-field w-input" maxlength="256" name="profile-image" data-name="profile-image" id="profile-image" required="true">
             <label for="city" class="reference-field-label">City <span class="red-star-text-span">*</span></label>
