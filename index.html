@@ -213,7 +213,7 @@ stateMapping: instantsearch.stateMappings.simple(),
 },
 });
 // javascript code post request to / create - checkout - session
-const createCheckoutSession = async (profile_image_url, linkedin_url, name, bio, city, country, calendly_url, email, user_id, tags) => {
+const createCheckoutSession = async (profile_image_url, linkedin_url, name, bio, city, country, calendly_url, email, user_id, tags, rate) => {
 const payload = {
 profile_image_url,
 linkedin_url,
@@ -224,6 +224,7 @@ country,
 calendly_url,
 email,
 user_id,
+rate,
 tags: tags.join(', ')
 }
 console.log(payload);
@@ -255,7 +256,7 @@ headers: {
 });
 const data = await response.json();
 console.log(data);
-const res = await createCheckoutSession(data.profile_image_url, data.linkedin_url, data.name, data.bio, data.city, data.country, data.calendly_url, data.email, data.objectID, data.categories);
+const res = await createCheckoutSession(data.profile_image_url, data.linkedin_url, data.name, data.bio, data.city, data.country, data.calendly_url, data.email, data.objectID, data.categories, data.rate);
 };
 search.addWidgets([
 instantsearch.widgets.searchBox({
